@@ -1,3 +1,4 @@
+import CoursesSection from "@/components/landing/CoursesSection"
 import CreatorBenefits from "@/components/landing/CreatorBenefits"
 import CtaSection from "@/components/landing/CtaSection"
 import HeroSection from "@/components/landing/HeroSection"
@@ -9,6 +10,7 @@ export default function Page() {
   return (
     <div>
       <HeroSection />
+      <CoursesSection />
       <LearningPaths />
       <PlatformStats/>
       <CreatorBenefits/>
