@@ -1,11 +1,8 @@
 import { Geist_Mono, Inter } from "next/font/google"
-
 import "./globals.css"
-import { cn } from "@/lib/utils";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { cn } from "@/lib/utils"
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'})
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
@@ -21,15 +18,14 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
+      className={cn(
+        "antialiased",
+        fontMono.variable,
+        "font-sans",
+        inter.variable
+      )}
     >
-      <body>
-        <Navbar />
-        <div className="flex min-h-screen flex-col max-w-360 mx-auto ">
-          {children}
-        </div>
-        <Footer />
-      </body>
+      <body>{children}</body>
     </html>
   )
 }

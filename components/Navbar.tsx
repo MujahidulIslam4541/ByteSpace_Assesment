@@ -46,13 +46,13 @@ const Navbar = () => {
         <div className="flex items-center gap-4 sm:gap-6">
           <div className="hidden items-center gap-6 md:flex">
             <Link
-              href="/sign-in"
+              href="/signin"
               className="text-sm font-medium transition-colors hover:opacity-80"
             >
               Sign In
             </Link>
             <Link
-              href="/join-us"
+              href="/signup"
               className="text-sm font-medium transition-colors hover:opacity-80"
             >
               Join Us
@@ -96,10 +96,10 @@ const Navbar = () => {
                 <DropdownMenuSeparator />
 
                 <DropdownMenuGroup>
-                  <DropdownMenuItem render={<Link href="/sign-in" />}>
+                  <DropdownMenuItem render={<Link href="/signin" />}>
                     Sign In
                   </DropdownMenuItem>
-                  <DropdownMenuItem render={<Link href="/join-us" />}>
+                  <DropdownMenuItem render={<Link href="/signup" />}>
                     Join Us
                   </DropdownMenuItem>
                 </DropdownMenuGroup>

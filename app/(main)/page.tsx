@@ -12,8 +12,8 @@ export default function Page() {
       <HeroSection />
       <CoursesSection />
       <LearningPaths />
-      <PlatformStats/>
-      <CreatorBenefits/>
+      <PlatformStats />
+      <CreatorBenefits />
       <CtaSection />
       <TestimonialsSection />
     </div>
