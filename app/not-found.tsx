@@ -21,7 +21,7 @@ export default function NotFound() {
       <NotFoundBackgroundGrid />
 
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center text-center">
-        <span className="bg-linear-to-b from-lime-glow via-lime-glow/70 to-transparent bg-clip-text font-heading text-[7.5rem] leading-none font-extrabold tracking-tight text-transparent select-none sm:text-[12rem] md:text-[16rem] lg:text-[20rem]">
+        <span className="bg-linear-to-b from-lime-glow via-lime-glow/70 to-transparent bg-clip-text text-[7.5rem] leading-none font-extrabold tracking-tight text-transparent select-none sm:text-[12rem] md:text-[16rem] lg:text-[20rem]">
           404
         </span>
 

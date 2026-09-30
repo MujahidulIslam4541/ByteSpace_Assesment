@@ -26,7 +26,7 @@ const Navbar = () => {
             height={32}
             className="h-8 w-auto object-contain"
           />
-          <span className="font-heading text-2xl font-extrabold tracking-tight">
+          <span className="text-2xl font-extrabold tracking-tight">
             ByteSpace
           </span>
         </Link>

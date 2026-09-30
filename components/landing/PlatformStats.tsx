@@ -15,7 +15,7 @@ const StatMetricItem = ({ stat }: StatMetricItemProps) => {
       <dt className="order-2 text-xs text-muted-foreground sm:text-sm">
         {stat.label}
       </dt>
-      <dd className="order-1 font-heading text-2xl font-extrabold tracking-tight text-role-blue sm:text-3xl">
+      <dd className="order-1 text-2xl font-extrabold tracking-tight text-role-blue sm:text-3xl">
         {stat.value}
       </dd>
     </div>

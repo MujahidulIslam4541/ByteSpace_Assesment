@@ -25,10 +25,10 @@ const HeroFloatingShape = ({ shape }: HeroFloatingShapeProps) => {
 }
 
 const HeroBackgroundGrid = () => {
-  const cells = Array.from({ length: 48 }, (_, index) => index)
+  const cells = Array.from({ length: 96 }, (_, index) => index)
 
   return (
-    <div className="pointer-events-none absolute inset-0 z-0 grid grid-cols-4 grid-rows-6 border-t border-l border-primary-foreground/15 sm:grid-cols-6 lg:grid-cols-8">
+    <div className="pointer-events-none absolute inset-0 z-0 grid grid-cols-4 grid-rows-6 border-t border-l border-primary-foreground/15 sm:grid-cols-8 lg:grid-cols-12">
       {cells.map((cellIndex) => (
         <div
           key={cellIndex}
@@ -50,7 +50,7 @@ const HeroSection = () => {
         ))}
 
         <div className="relative z-20 mx-auto flex max-w-4xl flex-col items-center text-center">
-          <h1 className="max-w-3xl font-heading text-3xl leading-tight font-extrabold tracking-tight text-primary-foreground sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-4xl font-heading text-3xl leading-tight font-extrabold tracking-tight text-primary-foreground sm:text-5xl lg:text-7xl">
             Get Access to Hundreds
             <br className="hidden sm:inline" /> Courses Available
           </h1>
@@ -109,7 +109,7 @@ const HeroSection = () => {
             <p className="text-[10px] font-medium text-muted-foreground sm:text-xs">
               Learning Progress
             </p>
-            <p className="mt-1 font-heading text-xl font-extrabold text-foreground sm:text-3xl">
+            <p className="mt-1 text-xl font-extrabold text-foreground sm:text-3xl">
               55%
             </p>
             <div className="mt-2 h-1.5 w-24 overflow-hidden rounded-full bg-muted sm:mt-2.5 sm:w-36 md:w-44">
@@ -154,17 +154,10 @@ const HeroSection = () => {
                 key={index}
                 className="flex items-center gap-2.5 text-muted-foreground"
               >
-                <span className="flex size-8 items-center justify-center rounded-full bg-mutHome
-Courses
-Creators
-Sign In
-Join Us
-￼
-￼￼￼￼￼￼
-ed-foreground/20 text-muted-foreground">
+                <span className="flex size-8 items-center justify-center rounded-full bg-muted-foreground/20 text-muted-foreground">
                   <Icon className="size-4" />
                 </span>
-                <span className="font-heading text-base font-bold tracking-tight sm:text-lg">
+                <span className="text-base font-bold tracking-tight sm:text-lg">
                   {partner.name}
                 </span>
               </div>

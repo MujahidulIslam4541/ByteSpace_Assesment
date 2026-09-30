@@ -90,7 +90,7 @@ const CourseCard = ({ course }: CourseCardProps) => {
       </div>
 
       <div className="mt-4 flex items-baseline">
-        <span className="font-heading text-lg font-extrabold text-role-blue sm:text-xl">
+        <span className="text-lg font-extrabold text-role-blue sm:text-xl">
           ${course.price}
         </span>
         <span className="text-xs text-muted-foreground">/lifetime</span>

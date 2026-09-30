@@ -1,8 +1,12 @@
-import { Geist_Mono, Inter } from "next/font/google"
+import { Geist_Mono, Poppins } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-poppins",
+})
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
@@ -22,9 +26,15 @@ export default function RootLayout({
         "antialiased",
         fontMono.variable,
         "font-sans",
-        inter.variable
+        poppins.variable
       )}
     >
+      <head>
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body>{children}</body>
     </html>
   )

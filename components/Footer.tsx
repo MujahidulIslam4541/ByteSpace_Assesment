@@ -49,7 +49,7 @@ const FooterNewsletter = () => {
           height={32}
           className="h-8 w-auto object-contain"
         />
-        <span className="font-heading text-2xl font-extrabold tracking-tight text-foreground">
+        <span className="text-2xl font-extrabold tracking-tight text-foreground">
           ByteSpace
         </span>
       </Link>
