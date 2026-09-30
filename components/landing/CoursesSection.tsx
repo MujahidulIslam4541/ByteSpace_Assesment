@@ -55,7 +55,7 @@ const CoursesSection = () => {
     <section className="w-full bg-background px-4 py-12 sm:px-6 md:px-12 lg:py-20">
       <div className="mx-auto flex max-w-6xl flex-col items-center">
         <div className="max-w-4xl text-center">
-          <h2 className="mx-auto max-w-xl font-heading text-3xl leading-tight font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="mx-auto max-w-xl font-heading text-3xl leading-tight font-semibold tracking-tight text-foreground sm:text-[44px] ">
             Discover Your Passion, Build Your Skills
           </h2>
           <p className="mt-4 text-xs leading-relaxed text-muted-foreground sm:text-sm md:text-base">
@@ -66,7 +66,7 @@ const CoursesSection = () => {
           </p>
         </div>
 
-        <div className="mt-8 flex max-w-5xl flex-wrap items-center justify-center gap-2.5 sm:mt-10 sm:gap-3">
+        <div className="mt-8 flex max-w-6xl flex-wrap items-center justify-center gap-2.5 sm:mt-10 sm:gap-3">
           {visibleCategories.map((category) => (
             <CategoryFilterPill
               key={category}

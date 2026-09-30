@@ -28,7 +28,7 @@ const HeroBackgroundGrid = () => {
   const cells = Array.from({ length: 96 }, (_, index) => index)
 
   return (
-    <div className="pointer-events-none absolute inset-0 z-0 grid grid-cols-4 grid-rows-6 border-t border-l border-primary-foreground/15 sm:grid-cols-8 lg:grid-cols-12">
+    <div className="pointer-events-none absolute inset-0 z-0 grid grid-cols-4 grid-rows-8 border-t border-3 border-primary-foreground/15 sm:grid-cols-6 lg:grid-cols-12">
       {cells.map((cellIndex) => (
         <div
           key={cellIndex}
@@ -50,14 +50,14 @@ const HeroSection = () => {
         ))}
 
         <div className="relative z-20 mx-auto flex max-w-4xl flex-col items-center text-center">
-          <h1 className="max-w-4xl font-heading text-3xl leading-tight font-extrabold tracking-tight text-primary-foreground sm:text-5xl lg:text-7xl">
+          <h1 className="max-w-5xl font-heading text-3xl leading-tight font-extrabold tracking-tight text-primary-foreground sm:text-5xl lg:text-7xl">
             Get Access to Hundreds
             <br className="hidden sm:inline" /> Courses Available
           </h1>
 
-          <p className="mt-5 max-w-2xl text-xs leading-relaxed text-primary-foreground/85 sm:text-sm md:text-base">
+          <p className="mt-5 max-w-3xl text-xs leading-relaxed text-primary-foreground/85 sm:text-sm md:text-base">
             Unlock your creativity, gain valuable knowledge, and grow your
-            business with our wide range of courses
+            business with our wide range of courses.
           </p>
 
           <form
@@ -82,8 +82,8 @@ const HeroSection = () => {
           </form>
         </div>
 
-        <div className="relative z-20 mx-auto mt-10 flex w-full max-w-4xl items-end justify-center sm:mt-14">
-          <div className="pointer-events-none absolute bottom-0 left-1/2 z-0 h-[78%] w-[94%] -translate-x-1/2 rounded-t-full bg-lime-glow sm:h-[82%] sm:w-[86%]" />
+        <div className="relative z-20 mx-auto mt-10 flex w-full max-w-4xl items-end justify-center sm:mt-12">
+          <div className="pointer-events-none absolute bottom-0 left-1/2 z-0 h-[85%] w-[96%] -translate-x-1/2 rounded-t-full bg-lime-glow sm:h-[90%] sm:w-[90%]" />
 
           <div className="relative z-10 mx-auto w-full max-w-md sm:max-w-lg md:max-w-xl">
             <Image
@@ -94,7 +94,7 @@ const HeroSection = () => {
             />
           </div>
 
-          <div className="absolute top-[10%] left-[2%] z-20 rounded-2xl bg-card px-3.5 py-2.5 text-left text-card-foreground shadow-lg sm:top-[16%] sm:left-[8%] sm:px-5 sm:py-3.5 md:left-[11%]">
+          <div className="absolute top-[14%] left-[2%] z-20 rounded-2xl bg-card px-3.5 py-2.5 text-left text-card-foreground shadow-lg sm:top-[18%] sm:left-[12%] sm:px-5 sm:py-3.5 md:left-[12%]">
             <p className="text-xs font-bold text-foreground sm:text-sm">
               UI/UX Design
             </p>
@@ -105,7 +105,7 @@ const HeroSection = () => {
             </p>
           </div>
 
-          <div className="absolute top-[16%] right-[2%] z-20 rounded-2xl bg-card px-3.5 py-3 text-left text-card-foreground shadow-lg sm:top-[20%] sm:right-[6%] sm:px-5 sm:py-4 md:right-[9%]">
+          <div className="absolute top-[18%] right-[2%] z-20 rounded-2xl bg-card px-3.5 py-3 text-left text-card-foreground shadow-lg sm:top-[24%] sm:right-[10%] sm:px-5 sm:py-4 md:right-[20%]">
             <p className="text-[10px] font-medium text-muted-foreground sm:text-xs">
               Learning Progress
             </p>
@@ -117,13 +117,14 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="absolute bottom-[8%] left-[2%] z-20 rounded-2xl bg-card px-3.5 py-2.5 text-left text-card-foreground shadow-lg sm:bottom-[14%] sm:left-[8%] sm:px-4 sm:py-3 md:left-[11%]">
+          <div className="absolute bottom-[6%] left-[2%] z-20 rounded-2xl bg-card px-3.5 py-2.5 text-left text-card-foreground shadow-lg sm:bottom-[10%] sm:left-[6%] sm:px-4 sm:py-3 md:left-[16%]">
             <p className="text-xs font-bold text-foreground sm:text-sm">
               Happy Students
             </p>
             <div className="mt-0.5 flex items-center gap-1 text-[10px] text-muted-foreground sm:text-xs">
-              <span>4.9 (240)</span>
-              <Star className="size-3 fill-amber-400 text-amber-400 sm:size-3.5" />
+              <span className="font-semibold text-foreground">4.5</span>
+              <span>(240)</span>
+              <Star className="size-3 fill-lime-glow text-lime-glow sm:size-3.5" />
             </div>
 
             <div className="mt-2 flex items-center -space-x-2">
@@ -132,8 +133,8 @@ const HeroSection = () => {
                   key={index}
                   src={avatar}
                   alt="Happy student"
-                  width={28}
-                  height={28}
+                  width={30}
+                  height={30}
                   className="size-6 rounded-full object-cover ring-2 ring-background sm:size-7"
                 />
               ))}
@@ -145,8 +146,8 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="w-full bg-muted/60 px-4 py-7 sm:px-6 sm:py-9 md:px-12">
-        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-8 sm:justify-between sm:gap-10">
+      <div className="w-full bg-muted px-4 py-7 sm:px-6 sm:py-16 md:px-12">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-8 sm:justify-between sm:gap-15">
           {HERO_PARTNER_LOGOS.map((partner, index) => {
             const Icon = partner.icon
             return (
