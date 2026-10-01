@@ -1,10 +1,10 @@
 import Link from "next/link"
 
 const NotFoundBackgroundGrid = () => {
-  const cells = Array.from({ length: 40 }, (_, index) => index)
+  const cells = Array.from({ length: 96 }, (_, index) => index)
 
   return (
-    <div className="pointer-events-none absolute inset-0 z-0 grid grid-cols-4 grid-rows-5 border-t border-l border-primary-foreground/15 sm:grid-cols-6 lg:grid-cols-8">
+    <div className="pointer-events-none absolute inset-0 z-0 grid grid-cols-4 grid-rows-8 border-t border-l border-primary-foreground/15 sm:grid-cols-6 lg:grid-cols-12">
       {cells.map((cellIndex) => (
         <div
           key={cellIndex}

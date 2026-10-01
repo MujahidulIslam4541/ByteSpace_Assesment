@@ -41,14 +41,17 @@ const TestimonialsSection = () => {
   }
 
   return (
-    <section className="relative w-full overflow-hidden rounded-3xl bg-background py-12 lg:py-20">
-      <div className="pointer-events-none absolute top-4 left-1/3 size-80 -translate-x-1/4 rounded-full bg-lime-glow/55 blur-3xl md:size-112" />
-      <div className="pointer-events-none absolute top-1/3 -right-16 size-80 rounded-full bg-lime-glow/55 blur-3xl md:size-112" />
-      <div className="pointer-events-none absolute -bottom-24 -left-20 size-80 rounded-full bg-blue-glow/45 blur-3xl md:size-112" />
+    <section className="relative w-full overflow-hidden  bg-background py-12 lg:py-20">
 
-      <div className="relative z-10 mx-auto flex max-w-6xl flex-col gap-10 lg:gap-14">
+      <div className="pointer-events-none absolute top-4 left-1/3 size-80 -translate-x-1/4 rounded-full bg-lime-glow/40 blur-3xl md:size-112" />
+
+      <div className="pointer-events-none absolute top-1/3 -right-16 size-80 rounded-full bg-lime-glow/40 blur-3xl md:size-112" />
+
+      <div className="pointer-events-none absolute -bottom-24 -left-20 size-80 rounded-full bg-blue-glow/40 blur-3xl md:size-112" />
+
+      <div className="relative z-10 mx-auto flex max-w-300 flex-col gap-10 lg:gap-14">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between lg:gap-12">
-          <h2 className="max-w-md font-heading text-3xl leading-tight font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="max-w-3xl font-heading text-3xl leading-tight font-semibold tracking-tight text-foreground sm:text-[44px]">
             Discover What Our Community Is Saying
           </h2>
 
@@ -61,7 +64,7 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 items-start gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 items-start gap-10 md:grid-cols-2 lg:grid-cols-3">
           {TESTIMONIALS_CONTENT.map((testimonial) => (
             <TestimonialCard key={testimonial.id} testimonial={testimonial} />
           ))}

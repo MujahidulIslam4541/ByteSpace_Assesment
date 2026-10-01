@@ -95,8 +95,8 @@ const FooterNewsletter = () => {
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t-2 bg-background text-foreground">
-      <div className="mx-auto max-w-360 px-4 py-12 sm:px-6 md:px-12 lg:py-16">
+    <footer className="w-full  bg-background text-foreground">
+      <div className="mx-auto max-w-360 px-4 border-t-2 py-12 sm:px-6 md:px-12 lg:py-16">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <FooterNewsletter />
 
