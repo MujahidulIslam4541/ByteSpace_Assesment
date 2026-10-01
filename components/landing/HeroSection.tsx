@@ -7,6 +7,7 @@ import {
   HERO_STUDENT_AVATARS,
   type HeroFloatingShapeItem,
 } from "@/constants/hero"
+import { BackgroundGrid } from "../BackgroundGrid"
 
 interface HeroFloatingShapeProps {
   shape: HeroFloatingShapeItem
@@ -24,26 +25,12 @@ const HeroFloatingShape = ({ shape }: HeroFloatingShapeProps) => {
   )
 }
 
-const HeroBackgroundGrid = () => {
-  const cells = Array.from({ length: 96 }, (_, index) => index)
-
-  return (
-    <div className="pointer-events-none absolute inset-0 z-0 grid grid-cols-4 grid-rows-8 border-t border-3 border-primary-foreground/15 sm:grid-cols-6 lg:grid-cols-12">
-      {cells.map((cellIndex) => (
-        <div
-          key={cellIndex}
-          className="border-r border-b border-primary-foreground/15"
-        />
-      ))}
-    </div>
-  )
-}
 
 const HeroSection = () => {
   return (
     <section className="w-full overflow-hidden">
       <div className="relative w-full overflow-hidden bg-role-blue px-4 pt-28 text-primary-foreground sm:px-6 sm:pt-32 lg:px-8 lg:pt-36">
-        <HeroBackgroundGrid />
+        <BackgroundGrid cellsCount={96} rowsClass="grid-rows-8" />
 
         {HERO_FLOATING_SHAPES.map((shape, index) => (
           <HeroFloatingShape key={index} shape={shape} />

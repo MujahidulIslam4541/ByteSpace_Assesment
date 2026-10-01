@@ -1,16 +1,18 @@
-import { Geist_Mono, Poppins } from "next/font/google"
+import type { Metadata } from "next"
+import { Poppins } from "next/font/google"
 import "./globals.css"
 import { cn } from "@/lib/utils"
+
+export const metadata: Metadata = {
+  title: "ByteSpace - Get Access to Hundreds of Courses",
+  description:
+    "Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of curated online courses.",
+}
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
   variable: "--font-poppins",
-})
-
-const fontMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: "--font-mono",
 })
 
 export default function RootLayout({
@@ -22,12 +24,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn(
-        "antialiased",
-        fontMono.variable,
-        "font-sans",
-        poppins.variable
-      )}
+      className={cn("antialiased", poppins.variable)}
     >
       <head>
         <link

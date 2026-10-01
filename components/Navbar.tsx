@@ -61,7 +61,8 @@ const Navbar = () => {
 
           <button
             type="button"
-            className="inline-flex cursor-pointer items-center justify-center transition-opacity hover:opacity-80"
+            aria-label="Shopping Bag"
+            className="inline-flex cursor-pointer items-center justify-center transition-opacity hover:opacity-80 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
           >
             <ShoppingBag className="size-5" />
           </button>

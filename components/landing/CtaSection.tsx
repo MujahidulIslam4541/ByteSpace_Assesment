@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { CTA_CONTENT, type CtaFloatingShapeItem } from "@/constants/cta"
+import { BackgroundGrid } from "../BackgroundGrid"
 
 interface CtaFloatingShapeProps {
   shape: CtaFloatingShapeItem
@@ -17,25 +18,12 @@ const CtaFloatingShape = ({ shape }: CtaFloatingShapeProps) => {
   )
 }
 
-const CtaBackgroundGrid = () => {
-  const cells = Array.from({ length: 72 }, (_, index) => index)
-
-  return (
-    <div className="pointer-events-none absolute inset-0 z-0 grid grid-cols-4 grid-rows-5 border-t border-l border-primary-foreground/15 sm:grid-cols-6 lg:grid-cols-12">
-      {cells.map((cellIndex) => (
-        <div
-          key={cellIndex}
-          className="border-r border-b border-primary-foreground/15"
-        />
-      ))}
-    </div>
-  )
-}
 
 const CtaSection = () => {
   return (
     <section className="relative w-full overflow-hidden bg-role-blue py-16 text-primary-foreground sm:py-20">
-      <CtaBackgroundGrid />
+      <BackgroundGrid cellsCount={72} rowsClass="grid-rows-5" />
+
 
       {CTA_CONTENT.map((shape) => (
         <CtaFloatingShape key={shape.id} shape={shape} />

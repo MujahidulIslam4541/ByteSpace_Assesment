@@ -41,7 +41,7 @@ const TestimonialsSection = () => {
   }
 
   return (
-    <section className="relative w-full overflow-hidden  bg-background py-12 lg:py-20">
+    <section className="relative w-full overflow-hidden  bg-background lg:py-20  px-4 py-12 sm:px-6 md:px-12 ">
 
       <div className="pointer-events-none absolute top-4 left-1/3 size-80 -translate-x-1/4 rounded-full bg-lime-glow/40 blur-3xl md:size-112" />
 

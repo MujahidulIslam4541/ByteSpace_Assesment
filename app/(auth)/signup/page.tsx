@@ -1,26 +1,12 @@
 import Image from "next/image"
 import Link from "next/link"
 import signInSignUpImage from "@/assets/SignInSignUpImag.png"
-
-const SignUpBackgroundGrid = () => {
-  const cells = Array.from({ length: 96 }, (_, index) => index)
-
-  return (
-    <div className="pointer-events-none absolute inset-0 z-0 grid grid-cols-4 grid-rows-8 border-t border-l border-primary-foreground/15 sm:grid-cols-6 lg:grid-cols-12">
-      {cells.map((cellIndex) => (
-        <div
-          key={cellIndex}
-          className="border-r border-b border-primary-foreground/15"
-        />
-      ))}
-    </div>
-  )
-}
+import BackgroundGrid from "@/components/BackgroundGrid"
 
 export default function SignUpPage() {
   return (
     <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-role-blue px-4 pt-16 pb-6 text-primary-foreground sm:px-6 md:px-12 lg:h-screen lg:min-h-0 lg:pt-14 lg:pb-6">
-      <SignUpBackgroundGrid />
+      <BackgroundGrid />
 
       <div className="relative z-10 mx-auto grid w-full max-w-5xl grid-cols-1 items-center gap-6 lg:grid-cols-12 lg:gap-8">
         <div className="flex flex-col lg:col-span-6">
@@ -34,7 +20,7 @@ export default function SignUpPage() {
             cost.
           </p>
 
-          <div className="mt-4 flex w-full max-w-sm justify-center sm:max-w-md lg:mt-6 lg:max-w-105 xl:max-w-md">
+          <div className="mt-4 flex w-full max-w-sm justify-center sm:max-w-md lg:mt-6 lg:max-w-120 xl:max-w-md">
             <Image
               src={signInSignUpImage}
               alt="ByteSpace courses and happy students preview"
@@ -58,33 +44,42 @@ export default function SignUpPage() {
 
             <form action="#" className="mt-5 flex flex-col gap-3 sm:mt-6 sm:gap-3.5">
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-medium text-foreground">
+                <label htmlFor="signup-name" className="text-xs font-medium text-foreground">
                   Full Name
                 </label>
                 <input
+                  id="signup-name"
+                  name="name"
                   type="text"
+                  required
                   placeholder="Jamie Davis"
                   className="w-full rounded-xl border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                 />
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-medium text-foreground">
+                <label htmlFor="signup-email" className="text-xs font-medium text-foreground">
                   Email
                 </label>
                 <input
+                  id="signup-email"
+                  name="email"
                   type="email"
+                  required
                   placeholder="designer@example.com"
                   className="w-full rounded-xl border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                 />
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-medium text-foreground">
+                <label htmlFor="signup-password" className="text-xs font-medium text-foreground">
                   Password
                 </label>
                 <input
+                  id="signup-password"
+                  name="password"
                   type="password"
+                  required
                   placeholder="********"
                   className="w-full rounded-xl border border-input bg-background px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
                 />

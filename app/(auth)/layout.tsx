@@ -8,7 +8,7 @@ export default function AuthLayout({
   children: React.ReactNode
 }>) {
   return (
-    <div className="relative mx-auto flex min-h-screen w-full max-w-360 flex-col overflow-x-hidden lg:h-screen lg:min-h-0 lg:overflow-hidden">
+    <div className="relative mx-auto flex min-h-screen w-full max-w-360 flex-col overflow-x-hidden lg:min-h-screen">
       <header className="absolute inset-x-0 top-0 z-50 w-full bg-transparent">
         <div className="mx-auto flex max-w-6xl items-center px-4 py-4 sm:px-6 md:px-12 md:py-5">
           <Link href="/" className="inline-flex items-center">
@@ -22,7 +22,7 @@ export default function AuthLayout({
           </Link>
         </div>
       </header>
-      <main className="flex flex-1 flex-col lg:h-full lg:overflow-hidden">{children}</main>
+      <main className="flex flex-1 flex-col">{children}</main>
     </div>
   )
 }
