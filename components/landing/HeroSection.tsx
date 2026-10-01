@@ -37,7 +37,7 @@ const HeroSection = () => {
         ))}
 
         <div className="relative z-20 mx-auto flex max-w-4xl flex-col items-center text-center">
-          <h1 className="max-w-5xl font-heading text-3xl leading-tight font-extrabold tracking-tight text-primary-foreground sm:text-5xl lg:text-7xl">
+          <h1 className="max-w-5xl font-heading text-2xl leading-tight font-extrabold tracking-tight text-primary-foreground sm:text-5xl lg:text-7xl">
             Get Access to Hundreds
             <br className="hidden sm:inline" /> Courses Available
           </h1>
