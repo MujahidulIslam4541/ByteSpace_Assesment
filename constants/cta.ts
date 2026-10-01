@@ -21,7 +21,7 @@ export const CTA_CONTENT: CtaFloatingShapeItem[] = [
     src: limeSpiral,
     alt: "Decorative lime spiral shape",
     wrapperClassName:
-      "pointer-events-none absolute -top-2 -left-2 z-10 w-20 sm:w-28 md:w-36 lg:w-44",
+      "pointer-events-none absolute -top-11 -left-2 z-10 w-20 sm:w-28 md:w-36 lg:w-40",
     imageClassName: "h-auto w-full object-contain",
   },
   {
@@ -29,7 +29,7 @@ export const CTA_CONTENT: CtaFloatingShapeItem[] = [
     src: whiteSpring,
     alt: "Decorative white spring shape",
     wrapperClassName:
-      "pointer-events-none absolute top-6 left-[14%] z-10 hidden w-16 sm:block md:w-24 lg:w-32",
+      "pointer-events-none absolute top-6 left-[14%] z-10 hidden w-16 sm:block md:w-24 lg:w-36",
     imageClassName: "h-auto w-full object-contain",
   },
   {
@@ -69,7 +69,7 @@ export const CTA_CONTENT: CtaFloatingShapeItem[] = [
     src: limeSpiral2,
     alt: "Decorative bottom right lime spiral shape",
     wrapperClassName:
-      "pointer-events-none absolute -bottom-0 right-[7%] z-10 w-24 sm:w-32 md:w-40 lg:w-48",
+      "pointer-events-none absolute -bottom-0 right-[7%] z-10 w-24 sm:w-32 md:w-40 lg:w-52",
     imageClassName: "h-auto w-full object-contain",
   },
 ]

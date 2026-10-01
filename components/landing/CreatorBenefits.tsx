@@ -34,7 +34,7 @@ const CreatorBenefitListItem = ({ benefit }: CreatorBenefitListItemProps) => {
 
 const CreatorBenefits = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-background px-4 pb-12 sm:px-6 md:px-12">
+    <section className="relative w-full overflow-hidden bg-background px-4 py-12 sm:px-6 md:px-12">
 
       <div className="pointer-events-none absolute -top-24 -left-20 size-80 rounded-full bg-blue-glow/40 blur-3xl md:size-112" />
       <div className="pointer-events-none absolute -bottom-20 -left-16 size-80 rounded-full bg-lime-glow/40 blur-3xl md:size-112" />
