@@ -1,0 +1,74 @@
+import Image from "next/image"
+import creatorBenefitImage from "@/assets/creatorBenifitImage.png"
+import {
+  CREATOR_BENEFITS_CONTENT,
+  type CreatorBenefitItem,
+} from "@/constants/creatorBenefits"
+
+interface CreatorBenefitListItemProps {
+  benefit: CreatorBenefitItem
+}
+
+const CreatorBenefitListItem = ({ benefit }: CreatorBenefitListItemProps) => {
+  return (
+    <li className="flex items-center gap-3">
+      <span className="flex size-5 shrink-0 items-center justify-center rounded-full bg-role-blue text-primary-foreground">
+        <svg
+          viewBox="0 0 16 16"
+          fill="none"
+          className="size-3"
+          stroke="currentColor"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M3.5 8.5L6.5 11.5L12.5 4.5" />
+        </svg>
+      </span>
+      <span className="text-sm font-medium text-foreground/85 sm:text-base">
+        {benefit.label}
+      </span>
+    </li>
+  )
+}
+
+const CreatorBenefits = () => {
+  return (
+    <section className="relative w-full overflow-hidden bg-background px-4 py-12 sm:px-6 md:px-12">
+
+      <div className="pointer-events-none absolute -top-24 -left-20 size-80 rounded-full bg-blue-glow/40 blur-3xl md:size-112" />
+      <div className="pointer-events-none absolute -bottom-20 -left-16 size-80 rounded-full bg-lime-glow/40 blur-3xl md:size-112" />
+      <div className="pointer-events-none absolute -right-16 -bottom-24 size-80 rounded-full bg-blue-glow/40 blur-3xl md:size-112" />
+
+      <div className="relative z-10 mx-auto grid max-w-314.5 grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
+        <div className="relative order-2 mx-auto w-full max-w-lg lg:order-1 lg:max-w-none">
+          <Image
+            src={creatorBenefitImage}
+            alt="Smiling course creator holding a tablet surrounded by revenue and happy students statistics cards"
+            className="h-auto w-full object-contain"
+          />
+        </div>
+
+        <div className="order-1 flex flex-col gap-6 lg:order-2">
+          <h2 className="max-w-md font-heading text-3xl leading-tight font-semibold tracking-tight text-foreground sm:text-[44px]">
+            Create & Manage Courses Easily.
+          </h2>
+
+          <p className="max-w-lg text-sm leading-relaxed text-muted-foreground sm:text-base">
+            <strong className="font-semibold text-foreground">ByteSpace</strong>{" "}
+            supports individuals or entities in the creation, publication, and
+            administration of educational courses.
+          </p>
+
+          <ul className="mt-1 flex flex-col gap-3.5">
+            {CREATOR_BENEFITS_CONTENT.map((benefit) => (
+              <CreatorBenefitListItem key={benefit.id} benefit={benefit} />
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default CreatorBenefits

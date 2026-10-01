@@ -1,15 +1,18 @@
-import { Geist_Mono, Inter } from "next/font/google"
-
+import type { Metadata } from "next"
+import { Poppins } from "next/font/google"
 import "./globals.css"
-import { cn } from "@/lib/utils";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import { cn } from "@/lib/utils"
 
-const inter = Inter({subsets:['latin'],variable:'--font-sans'})
+export const metadata: Metadata = {
+  title: "ByteSpace - Get Access to Hundreds of Courses",
+  description:
+    "Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of curated online courses.",
+}
 
-const fontMono = Geist_Mono({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-mono",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-poppins",
 })
 
 export default function RootLayout({
@@ -21,15 +24,15 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, "font-sans", inter.variable)}
+      className={cn("antialiased", poppins.variable)}
     >
-      <body>
-        <Navbar />
-        <div className="flex min-h-screen flex-col max-w-360 mx-auto ">
-          {children}
-        </div>
-        <Footer />
-      </body>
+      <head>
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>{children}</body>
     </html>
   )
 }

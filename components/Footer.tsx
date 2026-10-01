@@ -5,7 +5,7 @@ import {
   FOOTER_LEGAL_LINKS,
   FOOTER_NAVIGATION_COLUMNS,
   type FooterNavigationColumn,
-} from "@/constants"
+} from "@/constants/footer"
 
 interface FooterLinkColumnProps {
   column: FooterNavigationColumn
@@ -49,7 +49,7 @@ const FooterNewsletter = () => {
           height={32}
           className="h-8 w-auto object-contain"
         />
-        <span className="font-heading text-2xl font-extrabold tracking-tight text-foreground">
+        <span className="text-2xl font-extrabold tracking-tight text-foreground">
           ByteSpace
         </span>
       </Link>
@@ -74,7 +74,10 @@ const FooterNewsletter = () => {
           placeholder="Enter your email"
           className="min-w-0 flex-1 rounded-4xl border border-input bg-background px-6 py-3.5 text-sm text-foreground placeholder:text-muted-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
         />
-        <button type="submit" className="rounded-full bg-[#d4fb20] px-6 py-3">
+        <button
+          type="submit"
+          className="cursor-pointer rounded-full bg-lime-glow px-6 py-3 text-sm font-medium text-foreground transition-colors hover:bg-lime-glow/90 focus-visible:ring-2 focus-visible:ring-ring focus-visible:outline-none"
+        >
           Search
         </button>
       </form>
@@ -95,8 +98,8 @@ const FooterNewsletter = () => {
 
 const Footer = () => {
   return (
-    <footer className="w-full border-t-2 bg-background text-foreground">
-      <div className="mx-auto max-w-360 px-4 py-12 sm:px-6 md:px-12 lg:py-16">
+    <footer className="w-full bg-background text-foreground">
+      <div className="mx-auto max-w-360 px-4 border-t-2 py-12 sm:px-6 md:px-12 lg:py-16">
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <FooterNewsletter />
 
