@@ -24,14 +24,17 @@ const StatMetricItem = ({ stat }: StatMetricItemProps) => {
 
 const PlatformStats = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-background px-4 py-12 sm:px-6 md:px-12">
-      <div className="pointer-events-none absolute -top-24 left-8 size-80 rounded-full bg-lime-glow/55 blur-3xl md:left-24 md:size-112" />
-      <div className="pointer-events-none absolute -top-16 -right-16 size-80 rounded-full bg-blue-glow/45 blur-3xl md:size-112" />
-      <div className="pointer-events-none absolute -bottom-24 -left-20 size-80 rounded-full bg-blue-glow/45 blur-3xl md:size-112" />
+    <section className="relative w-full overflow-hidden bg-background px-4 pt-12 sm:px-6 md:px-12">
 
-      <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12">
+      <div className="pointer-events-none absolute -top-24 left-8 size-80 rounded-full bg-lime-glow/40 blur-3xl md:left-24 md:size-112" />
+
+      <div className="pointer-events-none absolute -top-16 -right-16 size-80 rounded-full bg-blue-glow/40 blur-3xl md:size-112" />
+
+      <div className="pointer-events-none absolute -bottom-24 -left-20 size-80 rounded-full bg-blue-glow/40 blur-3xl md:size-112" />
+
+      <div className="relative z-10 mx-auto grid max-w-314.5 grid-cols-1 items-center gap-10 lg:grid-cols-2">
         <div className="flex flex-col gap-6">
-          <h2 className="max-w-lg font-heading text-3xl leading-tight font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="font-heading text-3xl leading-tight font-semibold tracking-tight text-foreground sm:text-[44px] ">
             Your Path to Professional Growth Starts Here!
           </h2>
 

@@ -66,7 +66,7 @@ const CoursesSection = () => {
           </p>
         </div>
 
-        <div className="mt-8 flex max-w-6xl flex-wrap items-center justify-center gap-2.5 sm:mt-10 sm:gap-3">
+        <div className="mt-8 flex max-w-299.75 flex-wrap items-center justify-center gap-2.5 sm:mt-10 sm:gap-3">
           {visibleCategories.map((category) => (
             <CategoryFilterPill
               key={category}

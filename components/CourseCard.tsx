@@ -45,7 +45,7 @@ const CourseCard = ({ course }: CourseCardProps) => {
 
       <div className="mt-4 flex items-start justify-between gap-3">
         <div className="min-w-0 flex-1">
-          <h3 className="truncate font-heading text-base font-bold text-foreground sm:text-lg">
+          <h3 className="truncate font-heading text-base font-bold text-foreground sm:text-xl">
             {course.title}
           </h3>
           <p className="mt-0.5 text-xs text-muted-foreground">

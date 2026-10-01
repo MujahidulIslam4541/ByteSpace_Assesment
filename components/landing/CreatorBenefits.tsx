@@ -34,12 +34,13 @@ const CreatorBenefitListItem = ({ benefit }: CreatorBenefitListItemProps) => {
 
 const CreatorBenefits = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-background px-4 py-12 sm:px-6 md:px-12">
-      <div className="pointer-events-none absolute -top-24 -left-20 size-80 rounded-full bg-blue-glow/45 blur-3xl md:size-112" />
-      <div className="pointer-events-none absolute -bottom-20 -left-16 size-80 rounded-full bg-lime-glow/55 blur-3xl md:size-112" />
-      <div className="pointer-events-none absolute -right-16 -bottom-24 size-80 rounded-full bg-blue-glow/45 blur-3xl md:size-112" />
+    <section className="relative w-full overflow-hidden bg-background px-4 pb-12 sm:px-6 md:px-12">
 
-      <div className="relative z-10 mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
+      <div className="pointer-events-none absolute -top-24 -left-20 size-80 rounded-full bg-blue-glow/40 blur-3xl md:size-112" />
+      <div className="pointer-events-none absolute -bottom-20 -left-16 size-80 rounded-full bg-lime-glow/40 blur-3xl md:size-112" />
+      <div className="pointer-events-none absolute -right-16 -bottom-24 size-80 rounded-full bg-blue-glow/40 blur-3xl md:size-112" />
+
+      <div className="relative z-10 mx-auto grid max-w-314.5 grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
         <div className="relative order-2 mx-auto w-full max-w-lg lg:order-1 lg:max-w-none">
           <Image
             src={creatorBenefitImage}
@@ -49,7 +50,7 @@ const CreatorBenefits = () => {
         </div>
 
         <div className="order-1 flex flex-col gap-6 lg:order-2">
-          <h2 className="max-w-md font-heading text-3xl leading-tight font-extrabold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+          <h2 className="max-w-md font-heading text-3xl leading-tight font-semibold tracking-tight text-foreground sm:text-[44px]">
             Create & Manage Courses Easily.
           </h2>
 
